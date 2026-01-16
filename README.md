@@ -24,6 +24,7 @@ An advanced AI-powered platform that semantically matches candidate resumes with
 1. Deploy the backend service to a cloud provider like Render:
    - Create a new web service
    - Use the `resumematch-backend` directory
+   - Use the provided Dockerfile
    - Set up requirements from `requirements.txt`
    - Expose port 8000
    - Note the deployment URL
@@ -77,6 +78,14 @@ npm run dev
 3. System automatically matches resumes to job requirements
 4. View detailed match scores and explanations
 5. Get recommendations for improving matches
+
+## Troubleshooting Vercel Deployment
+
+If you encounter 404 errors on Vercel:
+1. Make sure you've set the NEXT_PUBLIC_API_URL environment variable
+2. The frontend needs to communicate with the deployed backend API
+3. Check that your backend is deployed and accessible
+4. Verify CORS settings in the backend
 
 ## License
 

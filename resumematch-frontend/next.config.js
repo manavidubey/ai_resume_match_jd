@@ -4,11 +4,14 @@ module.exports = {
   images: {
     unoptimized: true,
   },
-  // Ensure all routes are handled by the index page for our single-page app
   async rewrites() {
     return [
       {
-        source: "/:path*",
+        source: "/api/:path*",
+        destination: "/api/:path*",
+      },
+      {
+        source: "/((?!api|_next/static|_next/image|favicon.ico).*)",
         destination: "/",
       },
     ];
